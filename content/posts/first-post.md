@@ -8,7 +8,7 @@ draft: false
 
 Welcome to Computational Coffee, a web blog about Tech, AI and Computational stuff.
 
-Feel free to read and share with friends!
+Feel free to read and **share** with friends!
 
 Signed,
 *Federico, Lorenzo, Stefano and Michele*
