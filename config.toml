@@ -1,0 +1,7 @@
+baseURL = 'https://computationalcoffee.github.io'
+languageCode = 'en-us'
+title = 'Computational Coffee'
+theme = 'paper'
+
+[params]
+  github = 'computationalcoffee'
