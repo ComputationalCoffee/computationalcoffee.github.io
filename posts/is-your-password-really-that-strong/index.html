@@ -32,7 +32,7 @@ Yes, it has to do with that, but also to the fact that the majority of people su
 Because they are easy to remember, you would say.
 Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that."><meta itemprop=datePublished content="2021-11-30T16:49:55+01:00">
 <meta itemprop=dateModified content="2021-11-30T16:49:55+01:00">
-<meta itemprop=wordCount content="647">
+<meta itemprop=wordCount content="648">
 <meta itemprop=keywords content>
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Is Your Password Really That Strong?">
@@ -62,30 +62,30 @@ Yes, it has to do with that, but also to the fact that the majority of people su
 </p>
 <h1>Is Your Password Really That Strong?</h1>
 </header>
-<section class=post-content><p>The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from
-data breaches and databases of more than 270.000.000 passwords:</p>
+<section class=post-content><p>The latest <strong>NordPass</strong> &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from
+data breaches and databases of more than <em>270.000.000 passwords</em>:</p>
 <ol>
-<li>123456</li>
-<li>123456789</li>
-<li>12345</li>
-<li>qwerty</li>
-<li>password</li>
+<li><em>123456</em></li>
+<li><em>123456789</em></li>
+<li><em>12345</em></li>
+<li><em>qwerty</em></li>
+<li><em>password</em></li>
 </ol>
-<p>These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?</p>
+<p>These are the first 5, and if they don&rsquo;t surprise you, well, <strong>they don&rsquo;t surprise anyone either</strong>. Why then everybody use them?</p>
 <p><em>Because they are easy to remember</em>, you would say.</p>
-<p>Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.
+<p><strong>Yes</strong>, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.
 Of course we are not talking about building <em>stupid password rules</em> (the more password rules a system has, the easier it will be to crack them),
 but about the real human nature of not caring about a risk as long as &ldquo;it&rsquo;s not mine&rdquo;.</p>
-<p>However, this is not the topic of this article. So, <em>&ldquo;how can I know if my password is strong enough?"</em> is an excellent question.
-The answer to that will be given in a moment, but first we need to set-up some basic knowledge about dictionaries, entropy and password security!</p>
+<p>However, this is not the topic of this article. So, <strong>&ldquo;how can I know if my password is strong enough?"</strong> is an excellent question.
+The answer to that will be given in a moment, but first we need to set-up some <em>basic knowledge</em> about entropy and password security!</p>
 <h2 id=password-strength-and-entropy>Password Strength and Entropy</h2>
-<p>Password strength measures the risk of having a certain password brute-forced (a process of guessing it trial-by-trial): for this measure to be
+<p>Password strength measures the risk of having a certain password <strong>brute-forced</strong> (a process of guessing it trial-by-trial): for this measure to be
 as complete as possible we have to keep in mind factors like the use of <strong>numbers, letters, symbols, etc&mldr;</strong>.
-These factors are counted with a score function that uses <em>Entropy</em> bits as the output that we analyze. Entropy measures how unpredictable a password is.
+These factors are counted with a score function that uses <em>Entropy</em> bits as the output that we analyze. <strong>Entropy measures how unpredictable a password is</strong>.
 This strange measure is just a $log_2$ of the number of all possible passwords, if we assume that every symbol is produced independently.</p>
-<p>Thus, the Entropy E for a password of length L is: $E=L\cdot log_2(R)$ where R is the size of the pool of characters the password exists in.</p>
+<p>Thus, the Entropy E for a password of length L is: $$E=L\cdot log_2(R)$$ where $R$ is the size of the <em>pool</em> of characters the password exists in.</p>
 <h2 id=what-pool-are-we-talking-about>What pool are we talking about?</h2>
-<p>Let&rsquo;s now define a pool for commonly used characters for making a password:</p>
+<p>Let&rsquo;s now define a <em>pool</em> for commonly used characters for making a password:</p>
 <table>
 <thead>
 <tr>
@@ -124,9 +124,9 @@ This strange measure is just a $log_2$ of the number of all possible passwords, 
 </table>
 <p>Now, using the pool and the formula we are able to extract the Entropy from those common <em>bad passwords</em>!
 We will rank the good/bad password considering the fact that a password that has an Entropy of 19 bits is as strong as
-19 bits that are chosen randomly, like in a fair coin toss. This password with an Entropy of 19 bits will require $2^42$
+19 bits that are chosen randomly, like in a fair coin toss. This password with an Entropy of 19 bits will require $2^{42}$
 brute-force attempts: so, stronger passwords have more Entropy bits (easy peasy!).</p>
-<p>Good passwords generally have more than 120 bits of Entropy, but excellent passwords (like long Diceware passwords), can have
+<p>Good passwords generally have more than <strong>120 bits of Entropy</strong>, but excellent passwords (like long Diceware passwords), can have
 a lot of bits and be easily remembered!</p>
 <h2 id=examples>Examples</h2>
 <table>
@@ -167,18 +167,18 @@ a lot of bits and be easily remembered!</p>
 </table>
 <p>As you can see from this list we have a note to make about 3 things:</p>
 <ul>
-<li>You can have an excellent password without adding numbers or special characters!</li>
-<li>Machine generated passwords are <em>not</em> harder to hack as you can see, but surely impossible to remember&mldr;</li>
-<li>Character repetition is bad for your passwords, even if it has an high Entropy.</li>
+<li>You can have an excellent password <strong>without adding numbers or special characters</strong>!</li>
+<li>Machine generated passwords are <em>not</em> harder to hack as you can see, but surely <strong>impossible to remember</strong>&mldr;</li>
+<li><strong>Character repetition is bad</strong> for your passwords, even if it has an high Entropy.</li>
 </ul>
 <h2 id=conclusion-and-acknowledgements>Conclusion and acknowledgements</h2>
 <p>Knowing that you should follow best-practices to avoid making weak passwords (and now you know how!) the biggest
-vulnerability here is represented by humans and their ability not to leak those password via phishing
+<em>vulnerability</em> here is represented by humans and their ability not to leak those password via phishing
 or just having that password in a clear file on the desktop (and that, my friends, happens a lot).</p>
-<p>If you want to know the Entropy of your passwords without inputting them online you can use <a href=https://github.com/grtcdr/paspio>this</a> free and open source tool.
-Then, I still consider Diceware passwords to be the best at the job, and you can create them <a href=https://diceware.dmuth.org/>here</a> or in your password manager (mine is Bitwarden)!</p>
+<p>If you want to know the Entropy of your passwords without inputting them online you can use <a href=https://github.com/grtcdr/paspio>this</a> <em>free and open source</em> tool.
+Then, I still consider <strong>Diceware</strong> passwords to be the best at the job, and you can create them <a href=https://diceware.dmuth.org/>here</a> or in your password manager (mine is <strong>Bitwarden</strong>)!</p>
 <p>Thanks for reading!</p>
-<p><em>Author: Federico</em></p>
+<p><em>Author: Federico &ldquo;EvilScript&rdquo; Torrielli</em></p>
 </section>
 <nav class=post-nav>
 <a class=next href=https://computationalcoffee.github.io/posts/first-post/><span>First Post</span><span>→</span></a>
