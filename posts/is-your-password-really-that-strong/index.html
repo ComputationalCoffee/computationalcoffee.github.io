@@ -1,0 +1,196 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>Is Your Password Really That Strong? - Computational Coffee</title>
+<meta name=description content="The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from data breaches and databases of more than 270.000.000 passwords:
+ 123456 123456789 12345 qwerty password  These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?
+Because they are easy to remember, you would say.
+Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.">
+<meta name=author content>
+<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/app.min.css>
+<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/an-old-hope.min.css>
+<script defer src=https://computationalcoffee.github.io/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
+<link rel=preload as=image href=https://computationalcoffee.github.io/theme.png>
+<link rel=preload as=image href=https://computationalcoffee.github.io/github.svg>
+<link rel=icon href=https://computationalcoffee.github.io/favicon.ico>
+<link rel=apple-touch-icon href=https://computationalcoffee.github.io/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.89.4">
+<meta property="og:title" content="Is Your Password Really That Strong?">
+<meta property="og:description" content="The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from data breaches and databases of more than 270.000.000 passwords:
+ 123456 123456789 12345 qwerty password  These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?
+Because they are easy to remember, you would say.
+Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://computationalcoffee.github.io/posts/is-your-password-really-that-strong/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-30T16:49:55+01:00">
+<meta property="article:modified_time" content="2021-11-30T16:49:55+01:00">
+<meta itemprop=name content="Is Your Password Really That Strong?">
+<meta itemprop=description content="The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from data breaches and databases of more than 270.000.000 passwords:
+ 123456 123456789 12345 qwerty password  These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?
+Because they are easy to remember, you would say.
+Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that."><meta itemprop=datePublished content="2021-11-30T16:49:55+01:00">
+<meta itemprop=dateModified content="2021-11-30T16:49:55+01:00">
+<meta itemprop=wordCount content="647">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Is Your Password Really That Strong?">
+<meta name=twitter:description content="The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from data breaches and databases of more than 270.000.000 passwords:
+ 123456 123456789 12345 qwerty password  These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?
+Because they are easy to remember, you would say.
+Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.">
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</head>
+<body class=not-ready data-menu=false>
+<header class=header>
+<p class=logo>
+<a class=site-name href=https://computationalcoffee.github.io>Computational Coffee</a><a class=btn-dark></a>
+</p>
+<script>let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),sysDark=window.matchMedia('(prefers-color-scheme: dark)'),darkVal=localStorage.getItem('dark'),setDark=a=>{bodyClx[a?'add':'remove']('dark'),localStorage.setItem('dark',a?'yes':'no')};setDark(darkVal?darkVal==='yes':sysDark.matches),requestAnimationFrame(()=>bodyClx.remove('not-ready')),btnDark.addEventListener('click',()=>setDark(!bodyClx.contains('dark'))),sysDark.addEventListener('change',a=>setDark(a.matches))</script>
+<nav class=social>
+<a class=github style=--url:url(./github.svg) href=https://github.com/computationalcoffee target=_blank></a>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-title>
+<p>
+<time>Nov 30, 2021</time>
+</p>
+<h1>Is Your Password Really That Strong?</h1>
+</header>
+<section class=post-content><p>The latest NordPass &ldquo;most breached password&rdquo; of 2021, is a list of 200 most common passwords directly taken from
+data breaches and databases of more than 270.000.000 passwords:</p>
+<ol>
+<li>123456</li>
+<li>123456789</li>
+<li>12345</li>
+<li>qwerty</li>
+<li>password</li>
+</ol>
+<p>These are the first 5, and if they don&rsquo;t surprise you, well, they don&rsquo;t surprise anyone either. Why then everybody use them?</p>
+<p><em>Because they are easy to remember</em>, you would say.</p>
+<p>Yes, it has to do with that, but also to the fact that the majority of people surfing the web and using webapps are drawn to do that.
+Of course we are not talking about building <em>stupid password rules</em> (the more password rules a system has, the easier it will be to crack them),
+but about the real human nature of not caring about a risk as long as &ldquo;it&rsquo;s not mine&rdquo;.</p>
+<p>However, this is not the topic of this article. So, <em>&ldquo;how can I know if my password is strong enough?"</em> is an excellent question.
+The answer to that will be given in a moment, but first we need to set-up some basic knowledge about dictionaries, entropy and password security!</p>
+<h2 id=password-strength-and-entropy>Password Strength and Entropy</h2>
+<p>Password strength measures the risk of having a certain password brute-forced (a process of guessing it trial-by-trial): for this measure to be
+as complete as possible we have to keep in mind factors like the use of <strong>numbers, letters, symbols, etc&mldr;</strong>.
+These factors are counted with a score function that uses <em>Entropy</em> bits as the output that we analyze. Entropy measures how unpredictable a password is.
+This strange measure is just a $log_2$ of the number of all possible passwords, if we assume that every symbol is produced independently.</p>
+<p>Thus, the Entropy E for a password of length L is: $E=L\cdot log_2(R)$ where R is the size of the pool of characters the password exists in.</p>
+<h2 id=what-pool-are-we-talking-about>What pool are we talking about?</h2>
+<p>Let&rsquo;s now define a pool for commonly used characters for making a password:</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:right>Pool</th>
+<th style=text-align:left>Elements</th>
+<th style=text-align:center>Pool size</th>
+<th style=text-align:left>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:right>Lowercase latin letters</td>
+<td style=text-align:left>[a-z]</td>
+<td style=text-align:center>26</td>
+<td style=text-align:left></td>
+</tr>
+<tr>
+<td style=text-align:right>Uppercase latin letters</td>
+<td style=text-align:left>[A-Z]</td>
+<td style=text-align:center>26</td>
+<td style=text-align:left></td>
+</tr>
+<tr>
+<td style=text-align:right>Digits</td>
+<td style=text-align:left>[0-9]</td>
+<td style=text-align:center>10</td>
+<td style=text-align:left></td>
+</tr>
+<tr>
+<td style=text-align:right>Symbols</td>
+<td style=text-align:left>`~!@#$%^&*()-=_+[{]}|;' :&rdquo;,.&lt;>/?</td>
+<td style=text-align:center>33</td>
+<td style=text-align:left>Whitespace is included</td>
+</tr>
+</tbody>
+</table>
+<p>Now, using the pool and the formula we are able to extract the Entropy from those common <em>bad passwords</em>!
+We will rank the good/bad password considering the fact that a password that has an Entropy of 19 bits is as strong as
+19 bits that are chosen randomly, like in a fair coin toss. This password with an Entropy of 19 bits will require $2^42$
+brute-force attempts: so, stronger passwords have more Entropy bits (easy peasy!).</p>
+<p>Good passwords generally have more than 120 bits of Entropy, but excellent passwords (like long Diceware passwords), can have
+a lot of bits and be easily remembered!</p>
+<h2 id=examples>Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Password</th>
+<th>Entropy</th>
+<th>Is it good? (>120)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123456</td>
+<td>19.93</td>
+<td>No</td>
+</tr>
+<tr>
+<td>password</td>
+<td>37.60</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ThisPasswordIsSafe1212</td>
+<td>130.99</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>PasLapq@aop%gvf9mw%*Y#rz87rPEr!aFX8LG&b</td>
+<td>256.22</td>
+<td>Yes, but..</td>
+</tr>
+<tr>
+<td>SpyglassPushoverMuskinessSuspendShareCertified</td>
+<td>262.22</td>
+<td>Awesome, a Diceware!</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see from this list we have a note to make about 3 things:</p>
+<ul>
+<li>You can have an excellent password without adding numbers or special characters!</li>
+<li>Machine generated passwords are <em>not</em> harder to hack as you can see, but surely impossible to remember&mldr;</li>
+<li>Character repetition is bad for your passwords, even if it has an high Entropy.</li>
+</ul>
+<h2 id=conclusion-and-acknowledgements>Conclusion and acknowledgements</h2>
+<p>Knowing that you should follow best-practices to avoid making weak passwords (and now you know how!) the biggest
+vulnerability here is represented by humans and their ability not to leak those password via phishing
+or just having that password in a clear file on the desktop (and that, my friends, happens a lot).</p>
+<p>If you want to know the Entropy of your passwords without inputting them online you can use <a href=https://github.com/grtcdr/paspio>this</a> free and open source tool.
+Then, I still consider Diceware passwords to be the best at the job, and you can create them <a href=https://diceware.dmuth.org/>here</a> or in your password manager (mine is Bitwarden)!</p>
+<p>Thanks for reading!</p>
+<p><em>Author: Federico</em></p>
+</section>
+<nav class=post-nav>
+<a class=next href=https://computationalcoffee.github.io/posts/first-post/><span>First Post</span><span>→</span></a>
+</nav>
+</article>
+</main>
+<footer class=footer>
+<p>&copy; 2021 <a href=https://computationalcoffee.github.io>Computational Coffee</a></p>
+<p>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</p>
+<p>
+<a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper 5.1</a>
+</p>
+</footer>
+</body>
+</html>
