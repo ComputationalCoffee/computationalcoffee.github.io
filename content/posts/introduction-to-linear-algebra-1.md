@@ -2,7 +2,6 @@
 title: "Introduction to Linear Algebra 1/n"
 date: 2021-11-30T19:10:00+01:00
 draft: false
-mathjax: true
 ---
 # Lecture 1
 ## Mentions
