@@ -40,7 +40,7 @@ We will first find the solution of this system without using directly matrix ope
 
 ## Row Picture
 As this name suggest let's pick each rows of the system and plot the line that each row represent in a Cartesian space:
-![alt text](./images/Lorenzo/firstPost/RowPicture.png "RowPicture")
+![alt text](./images/Lorenzo/firstPost/RowPicture.png "RowPicture")\
 In a two-dimensional space each row is a line and if they are independent like these, they meet in a point.
 From this image is easy to visualize that the unique solution of that system is $x=1$ and $y=2$, the point that lies at the intersection of the two lines.\
 In fact if we substitute this answer in the system we obtain:
