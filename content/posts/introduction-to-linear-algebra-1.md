@@ -24,17 +24,18 @@ $$-x + 2y = 3$$
 We want therefore find the right x's and y's that resolve both equations in that system.
 A compact way to deal with such systems is using matrices:
 $$ Ax = b \Rightarrow
-\begin{matrix}
+\begin{bmatrix}
  2 & -1\\
 -1 & 2
-\end{matrix}
-\begin{matrix}
+\end{bmatrix}
+\begin{bmatrix}
 x \\ 
 y 
-\end{matrix} = \begin{matrix}
+\end{bmatrix} = 
+\begin{bmatrix}
 0 \\
 3 
-\end{matrix}$$
+\end{bmatrix}$$
 In this equation **A** is the coefficients matrix, **x** is the vector of unknowns and **b** is the right-hand side vector.
 We will first find the solution of this system without using directly matrix operations and then I'll tell you why matrix are necessary to deal with more complex system.
 
