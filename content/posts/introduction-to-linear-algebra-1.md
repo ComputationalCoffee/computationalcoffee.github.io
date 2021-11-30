@@ -31,7 +31,8 @@ $$ Ax = b \Rightarrow
 \begin{bmatrix}
 x \\ 
 y 
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix} = 
+\begin{bmatrix}
 0 \\
 3 
 \end{bmatrix}$$
