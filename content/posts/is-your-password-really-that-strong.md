@@ -47,7 +47,7 @@ Let's now define a *pool* for commonly used characters for making a password:
 
 Now, using the pool and the formula we are able to extract the Entropy from those common *bad passwords*!
 We will rank the good/bad password considering the fact that a password that has an Entropy of 19 bits is as strong as
-19 bits that are chosen randomly, like in a fair coin toss. This password with an Entropy of 19 bits will require $2^{42}$
+19 bits that are chosen randomly, like in a fair coin toss. This password with an Entropy of 19 bits will require $2^{19}$
 brute-force attempts: so, stronger passwords have more Entropy bits (easy peasy!).
 
 Good passwords generally have more than **120 bits of Entropy**, but excellent passwords (like long Diceware passwords), can have

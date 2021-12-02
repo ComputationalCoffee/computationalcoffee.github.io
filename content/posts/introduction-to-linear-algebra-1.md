@@ -19,29 +19,31 @@ There many applications of Linear Algebra in computer science here some of them:
 
 ## What is a matrix? What does it represent?
 Let's suppose we have to resolve one of the most simplest system of equations, 2 equations in 2 unknowns:
-$$2x - y = 0$$ 
+$$2x - y = 0$$
 $$-x + 2y = 3$$
 We want therefore find the right x's and y's that resolve both equations in that system.
 A compact way to deal with such systems is using matrices:
-$$ Ax = b \Rightarrow
+$$
+Ax = b \Rightarrow
 \begin{bmatrix}
- 2 & -1\\
--1 & 2
+  2 & -1\\\
+  -1 & 2
 \end{bmatrix}
 \begin{bmatrix}
-x \\ 
-y 
-\end{bmatrix} = 
+  x \\\
+  y 
+\end{bmatrix} =
 \begin{bmatrix}
-0 \\
-3 
-\end{bmatrix}$$
+  0 \\\
+  3 
+\end{bmatrix}
+$$
 In this equation **A** is the coefficients matrix, **x** is the vector of unknowns and **b** is the right-hand side vector.
 We will first find the solution of this system without using directly matrix operations and then I'll tell you why matrix are necessary to deal with more complex system.
 
 ## Row Picture
 As this name suggest let's pick each rows of the system and plot the line that each row represent in a Cartesian space:
-![RowPicture](https://github.com/ComputationalCoffee/computationalcoffee.github.io/blob/master/content/posts/images/Lorenzo/firstPost/RowPicture.png)\
+![RowPicture](https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/RowPicture.png)\
 In a two-dimensional space each row is a line and if they are independent like these, they meet in a point.
 From this image is easy to visualize that the unique solution of that system is $x=1$ and $y=2$, the point that lies at the intersection of the two lines.\
 In fact if we substitute this answer in the system we obtain:
@@ -51,10 +53,10 @@ $$-1 + 2 \cdot 2 = 3$$
 ## Column Picture
 Another way to get the solution and visualize graphically the system is picking each columns of the system and plot them as vectors in a Cartesian space:\
 ![ColumnPicture](https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/ColumnPicture.png)\
-In this image we have the vector $v =\begin{bmatrix} 2 \\ -1 \end{bmatrix}$ with the 2 coefficients of x in the system and $w =\begin{bmatrix} -1 \\ 2 \end{bmatrix}$ for the coefficients of y.
+In this image we have the vector $v =\begin{bmatrix} 2 \\\ -1 \end{bmatrix}$ with the 2 coefficients of x in the system and $w =\begin{bmatrix} -1 \\\ 2 \end{bmatrix}$ for the coefficients of y.
 What we got is this equation:
-$$ x \cdot \begin{bmatrix} 2 \\ -1 \end{bmatrix} + y \cdot \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}$$
-And we want the right linear combination of the vectors **v** and **w** to obtain the vector **b**. The solution obviously is the same: $x=1, y=2$ and it is shown graphically with the two vectors in red, equal to *w*, that starting from **v** arrive at **b**.
+$$ x \cdot \begin{bmatrix} 2 \\\ -1 \end{bmatrix} + y \cdot \begin{bmatrix} -1 \\\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\\ 3 \end{bmatrix}$$
+And we want the right linear combination of the vectors **v** and **w** to obtain the vector **b**. The solution obviously is the same: $x=1, y=2$ and it is shown graphically with the two vectors in red, equal to **w**, that starting from **v** arrive at **b**.
 
 ## Why use matrices?
 From this discussion, it may seem that matrices are not needed to solve any system of equations, because we could do that graphically. Yes, but no. Let's imagine only 1 additional dimension like small systems of 3 equations in 3 unknowns. In the Row Picture we have to draw 3 different planes and if they are independent two of those will meet on a line and with the third one the intersection will be only a single point: the point that solves the system.\
