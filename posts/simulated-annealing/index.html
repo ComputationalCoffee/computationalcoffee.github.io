@@ -1,0 +1,114 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>Simulated Annealing - Computational Coffee</title>
+<meta name=description content="It&rsquo;s a probabilistic technique (metaheuristic) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.
+Background The original idea of the simulated annealing was proposed in the 50&rsquo;s while its application in real optimization problems occurred in the 80&rsquo;s.">
+<meta name=author content>
+<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/app.min.css>
+<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/an-old-hope.min.css>
+<script defer src=https://computationalcoffee.github.io/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
+<link rel=preload as=image href=https://computationalcoffee.github.io/theme.png>
+<link rel=preload as=image href=https://computationalcoffee.github.io/github.svg>
+<link rel=icon href=https://computationalcoffee.github.io/favicon.ico>
+<link rel=apple-touch-icon href=https://computationalcoffee.github.io/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.90.1">
+<meta property="og:title" content="Simulated Annealing">
+<meta property="og:description" content="It&rsquo;s a probabilistic technique (metaheuristic) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.
+Background The original idea of the simulated annealing was proposed in the 50&rsquo;s while its application in real optimization problems occurred in the 80&rsquo;s.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://computationalcoffee.github.io/posts/simulated-annealing/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-12-12T12:21:45+01:00">
+<meta property="article:modified_time" content="2021-12-12T12:21:45+01:00">
+<meta itemprop=name content="Simulated Annealing">
+<meta itemprop=description content="It&rsquo;s a probabilistic technique (metaheuristic) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.
+Background The original idea of the simulated annealing was proposed in the 50&rsquo;s while its application in real optimization problems occurred in the 80&rsquo;s."><meta itemprop=datePublished content="2021-12-12T12:21:45+01:00">
+<meta itemprop=dateModified content="2021-12-12T12:21:45+01:00">
+<meta itemprop=wordCount content="926">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Simulated Annealing">
+<meta name=twitter:description content="It&rsquo;s a probabilistic technique (metaheuristic) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.
+Background The original idea of the simulated annealing was proposed in the 50&rsquo;s while its application in real optimization problems occurred in the 80&rsquo;s.">
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</head>
+<body class=not-ready data-menu=false>
+<header class=header>
+<p class=logo>
+<a class=site-name href=https://computationalcoffee.github.io>Computational Coffee</a><a class=btn-dark></a>
+</p>
+<script>let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),sysDark=window.matchMedia('(prefers-color-scheme: dark)'),darkVal=localStorage.getItem('dark'),setDark=a=>{bodyClx[a?'add':'remove']('dark'),localStorage.setItem('dark',a?'yes':'no')};setDark(darkVal?darkVal==='yes':sysDark.matches),requestAnimationFrame(()=>bodyClx.remove('not-ready')),btnDark.addEventListener('click',()=>setDark(!bodyClx.contains('dark'))),sysDark.addEventListener('change',a=>setDark(a.matches))</script>
+<nav class=social>
+<a class=github style=--url:url(./github.svg) href=https://github.com/computationalcoffee target=_blank></a>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-title>
+<p>
+<time>Dec 12, 2021</time>
+</p>
+<h1>Simulated Annealing</h1>
+</header>
+<section class=post-content><p>It&rsquo;s a probabilistic technique (<a href=https://en.wikipedia.org/wiki/Metaheuristic title=Metaheuristic>metaheuristic</a>) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.</p>
+<p><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Extrema_example_it.svg/1280px-Extrema_example_it.png alt=optimizationFunction></p>
+<h2 id=background>Background</h2>
+<p>The original idea of the simulated annealing was proposed in the 50&rsquo;s while its application in real optimization problems occurred in the 80&rsquo;s. It is a highly suitable search methodology for any non-convex optimization problem.
+From the physical point of view annealing is the process by which a solid, brought to a fluid state by heating at high temperatures, is brought back to solid or crystalline state, at low temperatures, gradually controlling and reducing the temperature. At high temperatures, the atoms in the system are in a highly disordered state and therefore the energy of the system is high. To bring back such atoms into a highly (statistically) ordered crystalline configuration, the temperature of the system must be lowered. Rapid reductions in temperature can cause defects in the crystal lattice with consequent metastability. Annealing avoids this phenomenon by proceeding with a gradual cooling of the system, bringing it to an overall excellent stable structure.</p>
+<h2 id=main-idea-of-the-algorithm>Main idea of the algorithm</h2>
+<p>Given a feasible solution of the problem, a successor is randomly chosen in its neighborhood, whose value could be less or more greater than the current. The probability of moving into a neighbor worse than the current decreases over time. Without loss of generality let&rsquo;s assume we are in a maximization problem and that $V_c$ is the value of the current solution $c$ and $V_s$ of its successor $s$. The two scenarios are:</p>
+<ul>
+<li>
+<p>$V_s > V_c$ we find a better point, so $s$ become our new current solution;</p>
+</li>
+<li>
+<p>$V_s \leq V_c$ we find a point that is currently worst, but that could in future lead us to the global optimum. Indeed, a worse point is not discarded a priori because it could make us leave a local optimum. So we accept $s$ in a probabilistic way:</p>
+<blockquote>
+<p>Let $X_{cs}$ be a binary random variable with values: $1$ if we update solution $c$ with $s$ and $0$ otherwise. The probabilistic distribution is $P(X_{cs} = 1) = e^{\frac{\Delta V}{T}}$. Where $\Delta V = V_s - V_c$ and $T$ is the cooling temperature.</p>
+</blockquote>
+<p>The idea of $\Delta V$ and $T$ is:</p>
+<ul>
+<li>$\Delta V$ is always negative because we subtract $V_c$ from $V_s$ and $V_s \leq V_c$. More negative $\Delta V$ is, less is the probability we&rsquo;ll chose $s$ as a successor of $c$. On the other hand more similar $s$ is to $c$ more probable is that we&rsquo;ll update the current point;</li>
+<li>$T$ starts with a positive value and it decreases over time. In the exponential function high values of $T$ lead us to accept worse values of the current more frequently. Indeed, it makes sense &ldquo;try&rdquo; worse solutions at the beginning of the iterations than at the end when we would like to obtain the global optimum. Temperature merely serves as a hyperparameter that implicitly defines the region of space explored by the algorithm. At high temperatures, the algorithm can cross almost all the space of admissible solutions since bad solutions are easily accepted. Then, by lowering the temperature, the algorithm is confined to increasingly restricted regions.</li>
+</ul>
+</li>
+</ul>
+<h1 id=pseudocode>Pseudocode</h1>
+<p>There are a lot of possible different implementations of Simulated Annealing and these differ on:</p>
+<ul>
+<li>the way in which each parameters and hyperparameters are initially instantiated. The choice of the best values, for the problem under consideration, may take a lot of time;</li>
+<li>the function used to find a neighbour solution of the current one;</li>
+<li>the choice of an appropriate temperature reduction scheme which determines when and how much reduce it;</li>
+<li>the initial feasible solution from which the algorithm starts;</li>
+<li>the stop criteria of the main loop.</li>
+</ul>
+<p>Here a possible implementation:</p>
+<p><img src=https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/secondPost/SApseudocode.png alt=SApseudocode></p>
+<p>In this pseudocode at each iteration of the for loop we update the current temperature $T_{curr}$. Others implementations use an inner loop and generate multiple successors for each temperature value in order to approximate well a Boltzamann distribution. This improvement leads to a better solution, but increases the computational time. Another important thing about the temperature is how to update it. Reducing the temperature too quickly causes the possibility that the algorithm remains confined in a local optimum. On the other hand, reducing the temperature very slowly will result in an increase in the calculation time. There are essentially two temperature cooling schemes: the geometric one and the logarithmic one.</p>
+<p>A different stop criteria than the one used in this pseudocode is to check whether the value of the best solution is close to theoretical global value, or to check when the last update of $x_{curr}$ occured.</p>
+<p>One last thing about the pseudocode is that the we can use every neighbour search we want, on the condition that it&rsquo;s fast and it obtains only feasible solutions of the problem.</p>
+<h1 id=conclusion>Conclusion</h1>
+<p>At high temperatures, the algorithm behaves more or less like a random search. The research jumps from one point to another of the solution space by identifying the areas in which it is most likely to identify the overall optimum. At low temperatures, Simulated Annealing is similar to steepest descent methods.</p>
+<blockquote>
+<p>This algorithm converges to the global optimum with a probability arbitrary close to $1$, but in a time that could be exponential. Conversely, using the Simulated Annealing as heuristic technique, its asymptotic behavior can be approximated in a polynomial time.</p>
+</blockquote>
+<p><em>Author: Lorenzo Sciandra</em></p>
+</section>
+<nav class=post-nav>
+<a class=next href=https://computationalcoffee.github.io/posts/must-have-programs-for-linux/><span>Must Have Programs for Linux</span><span>→</span></a>
+</nav>
+</article>
+</main>
+<footer class=footer>
+<p>&copy; 2021 <a href=https://computationalcoffee.github.io>Computational Coffee</a></p>
+<p>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</p>
+<p>
+<a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper 5.1</a>
+</p>
+</footer>
+</body>
+</html>
