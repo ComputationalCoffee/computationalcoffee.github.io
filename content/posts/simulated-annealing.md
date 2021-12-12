@@ -4,7 +4,6 @@ date: 2021-12-12T12:21:45+01:00
 draft: false
 mathjax: true
 ---
-
 It's a probabilistic technique ([metaheuristic](https://en.wikipedia.org/wiki/Metaheuristic "Metaheuristic")) used in local search algorithms for approximating the global optimum of a given function, especially when there is a lot of local optimum. Like every local search techniques, it starts with a possible solution of the problem, but it tries to move to a better point in the solution space probabilistically.
 
 ![optimizationFunction](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Extrema_example_it.svg/1280px-Extrema_example_it.png)
@@ -24,7 +23,6 @@ Given a feasible solution of the problem, a successor is randomly chosen in its 
   - $\Delta V$ is always negative because we subtract $V_c$ from $V_s$ and $V_s \leq V_c$. More negative $\Delta V$ is, less is the probability we'll chose $s$ as a successor of $c$. On the other hand more similar $s$ is to $c$ more probable is that we'll update the current point;
   - $T$ starts with a positive value and it decreases over time. In the exponential function high values of $T$ lead us to accept worse values of the current more frequently. Indeed, it makes sense "try" worse solutions at the beginning of the iterations than at the end when we would like to obtain the global optimum. Temperature merely serves as a hyperparameter that implicitly defines the region of space explored by the algorithm. At high temperatures, the algorithm can cross almost all the space of admissible solutions since bad solutions are easily accepted. Then, by lowering the temperature, the algorithm is confined to increasingly restricted regions.
   
-
 
 # Pseudocode
 There are a lot of possible different implementations of Simulated Annealing and these differ on:
