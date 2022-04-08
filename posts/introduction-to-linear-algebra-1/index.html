@@ -1,73 +1,6 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<title>Introduction to Linear Algebra 1/n - Computational Coffee</title>
-<meta name=description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts.">
-<meta name=author content>
-<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/app.min.css>
-<link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/an-old-hope.min.css>
-<script defer src=https://computationalcoffee.github.io/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
-<link rel=preload as=image href=https://computationalcoffee.github.io/theme.png>
-<link rel=preload as=image href=https://computationalcoffee.github.io/github.svg>
-<link rel=icon href=https://computationalcoffee.github.io/favicon.ico>
-<link rel=apple-touch-icon href=https://computationalcoffee.github.io/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.91.2">
-<meta property="og:title" content="Introduction to Linear Algebra 1/n">
-<meta property="og:description" content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://computationalcoffee.github.io/posts/introduction-to-linear-algebra-1/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2021-11-30T19:10:00+01:00">
-<meta property="article:modified_time" content="2021-11-30T19:10:00+01:00">
-<meta itemprop=name content="Introduction to Linear Algebra 1/n">
-<meta itemprop=description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts."><meta itemprop=datePublished content="2021-11-30T19:10:00+01:00">
-<meta itemprop=dateModified content="2021-11-30T19:10:00+01:00">
-<meta itemprop=wordCount content="745">
-<meta itemprop=keywords content>
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Introduction to Linear Algebra 1/n">
-<meta name=twitter:description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts.">
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
-</head>
-<body class=not-ready data-menu=false>
-<header class=header>
-<p class=logo>
-<a class=site-name href=https://computationalcoffee.github.io>Computational Coffee</a><a class=btn-dark></a>
-</p>
-<script>let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),sysDark=window.matchMedia('(prefers-color-scheme: dark)'),darkVal=localStorage.getItem('dark'),setDark=a=>{bodyClx[a?'add':'remove']('dark'),localStorage.setItem('dark',a?'yes':'no')};setDark(darkVal?darkVal==='yes':sysDark.matches),requestAnimationFrame(()=>bodyClx.remove('not-ready')),btnDark.addEventListener('click',()=>setDark(!bodyClx.contains('dark'))),sysDark.addEventListener('change',a=>setDark(a.matches))</script>
-<nav class=social>
-<a class=github style=--url:url(./github.svg) href=https://github.com/computationalcoffee target=_blank></a>
-</nav>
-</header>
-<main class=main>
-<article class=post-single>
-<header class=post-title>
-<p>
-<time>Nov 30, 2021</time>
-</p>
-<h1>Introduction to Linear Algebra 1/n</h1>
-</header>
-<section class=post-content><h1 id=lecture-1>Lecture 1</h1>
-<h2 id=mentions>Mentions</h2>
-<p>I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of <a href=https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/index.htm>Linear Algebra by Gilbert Strange</a>, one of the best courses you can find about these concepts.</p>
-<h2 id=some-applications>Some Applications</h2>
-<p>There many applications of Linear Algebra in computer science here some of them:</p>
-<ol>
-<li>
-<p><strong>Machine Learning</strong>: is the main topic in linear classifiers like SVM or in linear regression techniques like Least Squares;</p>
-</li>
-<li>
-<p><strong>Neural Network</strong>: in some NNs like ELM is used the pseudoinversion of a matrix to calculate the weights for every neurons in the architecture;</p>
-</li>
-<li>
-<p><strong>Optimization</strong>: the primary technique for solving linear programming is the simplex algorithm which is based on linear algebra.</p>
-</li>
-</ol>
-<h2 id=what-is-a-matrix-what-does-it-represent>What is a matrix? What does it represent?</h2>
-<p>Let&rsquo;s suppose we have to resolve one of the most simplest system of equations, 2 equations in 2 unknowns:
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Introduction to Linear Algebra 1/n - Computational Coffee</title><meta name=description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts."><meta name=author content><link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/app.min.css><link rel="preload stylesheet" as=style href=https://computationalcoffee.github.io/an-old-hope.min.css><script defer src=https://computationalcoffee.github.io/highlight.min.js onload=hljs.initHighlightingOnLoad()></script>
+<link rel=preload as=image href=https://computationalcoffee.github.io/theme.png><link rel=preload as=image href=https://computationalcoffee.github.io/github.svg><link rel=icon href=https://computationalcoffee.github.io/favicon.ico><link rel=apple-touch-icon href=https://computationalcoffee.github.io/apple-touch-icon.png><meta name=generator content="Hugo 0.96.0"><meta property="og:title" content="Introduction to Linear Algebra 1/n"><meta property="og:description" content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts."><meta property="og:type" content="article"><meta property="og:url" content="https://computationalcoffee.github.io/posts/introduction-to-linear-algebra-1/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-11-30T19:10:00+01:00"><meta property="article:modified_time" content="2021-11-30T19:10:00+01:00"><meta itemprop=name content="Introduction to Linear Algebra 1/n"><meta itemprop=description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts."><meta itemprop=datePublished content="2021-11-30T19:10:00+01:00"><meta itemprop=dateModified content="2021-11-30T19:10:00+01:00"><meta itemprop=wordCount content="745"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Introduction to Linear Algebra 1/n"><meta name=twitter:description content="Lecture 1 Mentions I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of Linear Algebra by Gilbert Strange, one of the best courses you can find about these concepts."><script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:["script","noscript","style","textarea","pre"]}},window.addEventListener("load",e=>{document.querySelectorAll("mjx-container").forEach(function(e){e.parentElement.classList+="has-jax"})})</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></head><body class=not-ready data-menu=false><header class=header><p class=logo><a class=site-name href=https://computationalcoffee.github.io>Computational Coffee</a><a class=btn-dark></a></p><script>let bodyClx=document.body.classList,btnDark=document.querySelector(".btn-dark"),sysDark=window.matchMedia("(prefers-color-scheme: dark)"),darkVal=localStorage.getItem("dark"),setDark=e=>{bodyClx[e?"add":"remove"]("dark"),localStorage.setItem("dark",e?"yes":"no")};setDark(darkVal?darkVal==="yes":sysDark.matches),requestAnimationFrame(()=>bodyClx.remove("not-ready")),btnDark.addEventListener("click",()=>setDark(!bodyClx.contains("dark"))),sysDark.addEventListener("change",e=>setDark(e.matches))</script><nav class=social><a class=github style=--url:url(./github.svg) href=https://github.com/computationalcoffee target=_blank></a></nav></header><main class=main><article class=post-single><header class=post-title><p><time>Nov 30, 2021</time></p><h1>Introduction to Linear Algebra 1/n</h1></header><section class=post-content><h1 id=lecture-1>Lecture 1</h1><h2 id=mentions>Mentions</h2><p>I think that nowadays in most of the current areas of research in computer science, math is central if you want to do something relevant. Linear Algebra is one of the math knowledge that a computer scientist should have. This article contains the basis of this subject, and what I&rsquo;ll mention is taken from the open course of <a href=https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/index.htm>Linear Algebra by Gilbert Strange</a>, one of the best courses you can find about these concepts.</p><h2 id=some-applications>Some Applications</h2><p>There many applications of Linear Algebra in computer science here some of them:</p><ol><li><p><strong>Machine Learning</strong>: is the main topic in linear classifiers like SVM or in linear regression techniques like Least Squares;</p></li><li><p><strong>Neural Network</strong>: in some NNs like ELM is used the pseudoinversion of a matrix to calculate the weights for every neurons in the architecture;</p></li><li><p><strong>Optimization</strong>: the primary technique for solving linear programming is the simplex algorithm which is based on linear algebra.</p></li></ol><h2 id=what-is-a-matrix-what-does-it-represent>What is a matrix? What does it represent?</h2><p>Let&rsquo;s suppose we have to resolve one of the most simplest system of equations, 2 equations in 2 unknowns:
 $$2x - y = 0$$
 $$-x + 2y = 3$$
 We want therefore find the right x&rsquo;s and y&rsquo;s that resolve both equations in that system.
@@ -88,42 +21,12 @@ y
 \end{bmatrix}
 $$
 In this equation <strong>A</strong> is the coefficients matrix, <strong>x</strong> is the vector of unknowns and <strong>b</strong> is the right-hand side vector.
-We will first find the solution of this system without using directly matrix operations and then I&rsquo;ll tell you why matrix are necessary to deal with more complex system.</p>
-<h2 id=row-picture>Row Picture</h2>
-<p>As this name suggest let&rsquo;s pick each rows of the system and plot the line that each row represent in a Cartesian space:
-<img src=https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/RowPicture.png alt=RowPicture><br>
-In a two-dimensional space each row is a line and if they are independent like these, they meet in a point.
-From this image is easy to visualize that the unique solution of that system is $x=1$ and $y=2$, the point that lies at the intersection of the two lines.<br>
-In fact if we substitute this answer in the system we obtain:
+We will first find the solution of this system without using directly matrix operations and then I&rsquo;ll tell you why matrix are necessary to deal with more complex system.</p><h2 id=row-picture>Row Picture</h2><p>As this name suggest let&rsquo;s pick each rows of the system and plot the line that each row represent in a Cartesian space:
+<img src=https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/RowPicture.png alt=RowPicture><br>In a two-dimensional space each row is a line and if they are independent like these, they meet in a point.
+From this image is easy to visualize that the unique solution of that system is $x=1$ and $y=2$, the point that lies at the intersection of the two lines.<br>In fact if we substitute this answer in the system we obtain:
 $$2\cdot1 -2 = 0$$
-$$-1 + 2 \cdot 2 = 3$$</p>
-<h2 id=column-picture>Column Picture</h2>
-<p>Another way to get the solution and visualize graphically the system is picking each columns of the system and plot them as vectors in a Cartesian space:<br>
-<img src=https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/ColumnPicture.png alt=ColumnPicture><br>
-In this image we have the vector $v =\begin{bmatrix} 2 \\ -1 \end{bmatrix}$ with the 2 coefficients of x in the system and $w =\begin{bmatrix} -1 \\ 2 \end{bmatrix}$ for the coefficients of y.
+$$-1 + 2 \cdot 2 = 3$$</p><h2 id=column-picture>Column Picture</h2><p>Another way to get the solution and visualize graphically the system is picking each columns of the system and plot them as vectors in a Cartesian space:<br><img src=https://raw.githubusercontent.com/ComputationalCoffee/computationalcoffee.github.io/master/content/posts/images/Lorenzo/firstPost/ColumnPicture.png alt=ColumnPicture><br>In this image we have the vector $v =\begin{bmatrix} 2 \\ -1 \end{bmatrix}$ with the 2 coefficients of x in the system and $w =\begin{bmatrix} -1 \\ 2 \end{bmatrix}$ for the coefficients of y.
 What we got is this equation:
 $$ x \cdot \begin{bmatrix} 2 \\ -1 \end{bmatrix} + y \cdot \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}$$
-And we want the right linear combination of the vectors <strong>v</strong> and <strong>w</strong> to obtain the vector <strong>b</strong>. The solution obviously is the same: $x=1, y=2$ and it is shown graphically with the two vectors in red, equal to <strong>w</strong>, that starting from <strong>v</strong> arrive at <strong>b</strong>.</p>
-<h2 id=why-use-matrices>Why use matrices?</h2>
-<p>From this discussion, it may seem that matrices are not needed to solve any system of equations, because we could do that graphically. Yes, but no. Let&rsquo;s imagine only 1 additional dimension like small systems of 3 equations in 3 unknowns. In the Row Picture we have to draw 3 different planes and if they are independent two of those will meet on a line and with the third one the intersection will be only a single point: the point that solves the system.<br>
-The same reasoning could be applied also to the Column Picture. It&rsquo;s difficult to represent multidimensional vectors and find their correct linear combination to get the right-hand side.</p>
-<h2 id=conclusion>Conclusion</h2>
-<p>As the dimensionality increases, we get systems that can be useful in practice, but we lose the possibility of being able to visualize them. Therefore, we need compact representations of multi-dimensional systems of equations and we need all the properties that matrices have to resolve significant problems.</p>
-<p>If I wrote everything I have learned over the years on linear algebra this article would become eternal and probably no one would come to the end. This is why I decided to divide what I think are the basic knowledge about this topic into several lectures, like Gilbert Strange did.</p>
-<p><em>Author: Lorenzo Sciandra</em></p>
-</section>
-<nav class=post-nav>
-<a class=prev href=https://computationalcoffee.github.io/posts/must-have-programs-for-linux/><span>←</span><span>Must Have Programs for Linux</span></a>
-<a class=next href=https://computationalcoffee.github.io/posts/is-your-password-really-that-strong/><span>Is Your Password Really That Strong?</span><span>→</span></a>
-</nav>
-</article>
-</main>
-<footer class=footer>
-<p>&copy; 2022 <a href=https://computationalcoffee.github.io>Computational Coffee</a></p>
-<p>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</p>
-<p>
-<a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper 5.1</a>
-</p>
-</footer>
-</body>
-</html>
+And we want the right linear combination of the vectors <strong>v</strong> and <strong>w</strong> to obtain the vector <strong>b</strong>. The solution obviously is the same: $x=1, y=2$ and it is shown graphically with the two vectors in red, equal to <strong>w</strong>, that starting from <strong>v</strong> arrive at <strong>b</strong>.</p><h2 id=why-use-matrices>Why use matrices?</h2><p>From this discussion, it may seem that matrices are not needed to solve any system of equations, because we could do that graphically. Yes, but no. Let&rsquo;s imagine only 1 additional dimension like small systems of 3 equations in 3 unknowns. In the Row Picture we have to draw 3 different planes and if they are independent two of those will meet on a line and with the third one the intersection will be only a single point: the point that solves the system.<br>The same reasoning could be applied also to the Column Picture. It&rsquo;s difficult to represent multidimensional vectors and find their correct linear combination to get the right-hand side.</p><h2 id=conclusion>Conclusion</h2><p>As the dimensionality increases, we get systems that can be useful in practice, but we lose the possibility of being able to visualize them. Therefore, we need compact representations of multi-dimensional systems of equations and we need all the properties that matrices have to resolve significant problems.</p><p>If I wrote everything I have learned over the years on linear algebra this article would become eternal and probably no one would come to the end. This is why I decided to divide what I think are the basic knowledge about this topic into several lectures, like Gilbert Strange did.</p><p><em>Author: Lorenzo Sciandra</em></p></section><nav class=post-nav><a class=prev href=https://computationalcoffee.github.io/posts/must-have-programs-for-linux/><span>←</span><span>Must Have Programs for Linux</span></a>
+<a class=next href=https://computationalcoffee.github.io/posts/is-your-password-really-that-strong/><span>Is Your Password Really That Strong?</span><span>→</span></a></nav></article></main><footer class=footer><p>&copy; 2022 <a href=https://computationalcoffee.github.io>Computational Coffee</a></p><p>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</p><p><a href=https://github.com/nanxiaobei/hugo-paper rel=noopener target=_blank>Paper 5.1</a></p></footer></body></html>
