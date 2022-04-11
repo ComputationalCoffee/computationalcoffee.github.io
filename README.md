@@ -1,1 +1,1 @@
-Computational Coffee Web Blog at ![computationalcoffee.github.io]
+Computational Coffee Web Blog -> ![computationalcoffee.github.io](blog)
